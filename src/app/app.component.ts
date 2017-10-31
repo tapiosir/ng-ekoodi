@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {User} from './user/user';
+import {UserService} from './user/user.service';
 
 @Component({
   selector: 'ekoodi-root',
@@ -10,12 +11,21 @@ export class AppComponent {
 
   selectedUserName: string;
 
-  constructor() {
+  firstName: string;
+  lastName: string;
+
+  constructor(private userService: UserService) {
     this.selectedUserName = 'ekoodi';
+    this.firstName = '';
+    this.lastName = '';
   }
 
-  changeName(): void {
-    this.selectedUserName = '3Kood1';
+  addUser(): void {
+    let user: User = new User(this.firstName, this.lastName);
+    console.log(user);
+    this.userService.addUser(user);
+    this.firstName = '';
+    this.lastName = '';
   }
 
   onUserSelected(user: User) {
