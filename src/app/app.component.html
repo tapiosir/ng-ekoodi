@@ -1,5 +1,6 @@
 
 
+
 <mat-form-field class="example-full-width">
   <input matInput placeholder="First name" [(ngModel)]="firstName" >
 </mat-form-field>
@@ -9,7 +10,24 @@
   </mat-form-field>
 
 
-<button mat-raised-button="" (click)="addUser()">add name to list</button>
+<button mat-raised-button (click)="addUser()">add name to list</button>
+
+<button mat-raised-button (click)="showUserList()">list</button>
+
+<button mat-raised-button (click)="showAddUser()">add user</button>
 
 
-<ekoodi-user-list (userSelected)="onUserSelected($event)"></ekoodi-user-list>
+<router-outlet></router-outlet>
+
+
+<!--
+<div fxLayout="row" fxFill >
+  <div fxFlex="30" fxLayout="column" fxLayoutAlign="center center">
+    heippa
+  </div>
+  <div fxHide.sm fxFlex fxLayout="column"fxLayoutAlign="center center">
+    heippa
+  </div>
+
+</div>
+-->
