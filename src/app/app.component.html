@@ -20,14 +20,26 @@
 <router-outlet></router-outlet>
 
 
+
 <!--
 <div fxLayout="row" fxFill >
   <div fxFlex="30" fxLayout="column" fxLayoutAlign="center center">
-    heippa
+    <button mat-raised-button fxLayoutAlign="left" (click)="addUser()">add name to list</button>
+<br>
+    <button  mat-raised-button fxLayoutAlign="left" (click)="showUserList()">list</button>
+<br>
+    <button mat-raised-button fxLayoutAlign="left" (click)="showAddUser()">add user</button>
   </div>
-  <div fxHide.sm fxFlex fxLayout="column"fxLayoutAlign="center center">
-    heippa
+  <div fxFlex fxLayout="column"fxLayoutAlign="center center">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="First name" [(ngModel)]="firstName" >
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Last name" [(ngModel)]="lastName" >
+    </mat-form-field>
   </div>
 
 </div>
+
 -->
